@@ -1,1 +1,1 @@
-# Search bar using html css javascript
+# Search-bar using html css & javascript
