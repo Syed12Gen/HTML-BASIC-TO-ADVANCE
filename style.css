@@ -1,63 +1,135 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    margin: 0%;
-    padding: 0%;
-    background-color: rgb(255, 248, 248);
-
+    font-family: 'Roboto', sans-serif;
 }
-
-.li, a, button {
-    font-family: "Montserrrat", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    color: rgba(118, 26, 224, 0.979);
-    text-decoration: none;
-
-}
-
-header {
+body {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    padding: 30px 10%;
+    min-height: 100vh;
+    background: #297eff
+}
+.search {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 60px;
+    transition: 0.5s;
+    box-shadow: 0 0 0 5px #257ef2;
+    overflow: hidden;
+
+}
+.search.active {
+    width: 360px;
+}
+.search .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.search .icon::before
+{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: 3px solid #287dfc;
+    border-radius: 50%;
+    transform: translate(-4px,-4px)
+}
+.search .icon::after
+{
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 12px;
+   background: #287dfc;
+   transform: translate(6px,6px) rotate(315deg);
+
 
 }
 
-.logo {
-    cursor: pointer;
-    margin-right: auto;
-
+.search .input 
+{
+    position: relative;
+    width: 300px;
+    height: 60px; 
+    left: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
 }
-
-.nav_links {
-    list-style: none;
-}
-
-.nav_links li {
-    display: inline-block;
-    padding: 0px 20px;
-}
-.nav_links li a {
-    transition: all 0.3 ease 0s;
-}
-.nav_links li a:hover {
-    color: #0088a9;
-    
-}
-button {
-    margin-left: 20px;
-    padding: 9px 25px;
-    background-color: rgb(10, 179, 170);
+.search .input input 
+{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
     border: none;
-    border-radius: 50px;
+    outline: none;
+    font-size: 18px;
+    padding: 10px 0;
+
+}
+.clear 
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    right: 15px;
     cursor: pointer;
-    transition: all 0.3 ease 0s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.clear::before
+{
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 15px;
+    background: #999;
+    transform: rotate(45deg);
+}
+.clear::after
+{
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 15px;
+    background: #999;
+    transform: rotate(315deg);
 }
 
-button:hover {
-    background-color: rgb(0, 255, 242);
 
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
